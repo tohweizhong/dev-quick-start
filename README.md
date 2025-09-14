@@ -12,3 +12,9 @@ GCP authentication
 
 GCP add IAM policy binding
 - `gcloud projects add-iam-policy-binding <PROJECT_ID> --member="<SERVICE ACCOUNT>" --role="roles/<ROLE>" --project=<PROJECT_ID>`
+
+Add environment variables into bash profile
+- `echo 'export GOOGLE_CLOUD_PROJECT="<PROJECT_ID>"' >> ~/.bash_profile`
+- `echo 'export GOOGLE_CLOUD_LOCATION="REGION_ID"' >> ~/.bash_profile`
+- `echo 'export GOOGLE_GENAI_USE_VERTEXAI=true' >> ~/.bash_profile`
+- `source ~/.bash_profile`
