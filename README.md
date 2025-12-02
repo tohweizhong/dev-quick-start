@@ -20,10 +20,7 @@ Set environment variables
 - Example `set_vars.sh`
 ```
 export GOOGLE_CLOUD_LOCATION="us-central1" # Example location
-
 ```
-
-
 Add environment variables into bash profile
 - `echo 'export GOOGLE_CLOUD_PROJECT="<PROJECT_ID>"' >> ~/.bash_profile`
 - `echo 'export GOOGLE_CLOUD_LOCATION="REGION_ID"' >> ~/.bash_profile`
@@ -32,3 +29,10 @@ Add environment variables into bash profile
 
 List of git commands that I always forget
 - https://github.com/tohweizhong/git-quick-start
+
+Dev notes
+- Vertex AI workbench instance needs a defined network in GCP project
+    - (User-managed and Managed notebooks are deprecated and no longer supported.)
+    - Create VPC using auto-mode
+- `Secure boot` in Machine Type
+- Added instance to organization policy `constraints/compute.vmExternalIpAccess`: `Override parent's policy` -> `Replace parent` -> `Allow` -> `projects/<PROJECT_NAME>/zones/us-central1-a/instances/<INSTANCE_NAME>`
