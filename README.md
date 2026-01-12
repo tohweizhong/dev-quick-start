@@ -11,6 +11,7 @@ GCP authentication
 - ADC login: `gcloud auth application-default login`
 - Set project: `gcloud config set project weizhong-project03`
 - (Set quota project: `gcloud auth application-default set-quota-project weizhong-project03`)
+- (See current project: `gcloud config list`)
 
 GCP add IAM policy binding
 - `gcloud projects add-iam-policy-binding <PROJECT_ID> --member="<SERVICE ACCOUNT>" --role="roles/<ROLE>" --project=<PROJECT_ID>`
@@ -27,8 +28,14 @@ Add environment variables into bash profile
 - `echo 'export GOOGLE_GENAI_USE_VERTEXAI=true' >> ~/.bash_profile`
 - `source ~/.bash_profile`
 
+ADK
+- Create a new agent: `adk create <agent_name>`
+
 List of git commands that I always forget
 - https://github.com/tohweizhong/git-quick-start
+
+Python
+- Use `dir` to see all properties and methods of the specified object, without the values. This function will return all the properties and methods, even built-in properties which are default for all object.
 
 Dev notes
 - Vertex AI workbench instance needs a defined network in GCP project
